@@ -24,7 +24,7 @@ export class Catalog extends Component
       .then(response => { 
         return response.json(); 
       })
-      .then(returnedItems => this.setState({ items: returnedItems, loading: false, loadedSuccess: true }))
+      .then(returnedItems => this.setState({ items: returnedItems.items, loading: false, loadedSuccess: true }))
       .catch(err =>
       {
         console.log(err);
